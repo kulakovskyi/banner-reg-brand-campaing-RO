@@ -1,0 +1,131 @@
+$blue: #000055
+$dark-blue: #00003D
+$magenta: #ff267e
+$grey: #EDEDED
+$green: #05C489
+$green-hover: #05b37c
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif //700
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600
+$font-suisse-med: SuisseIntl-Medium, sans-serif //500
+$font-wulkan: WulkanDisplay, sans-serif
+
+
+body
+  img
+    max-width: 100%
+    height: auto
+
+.wrapper
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+
+.banner
+  width: 50%
+  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
+  background: $blue
+  position: relative
+  overflow: hidden
+  cursor: default
+  background: $blue url("../img/bg.jpg") no-repeat 50% bottom/contain
+  padding: 100px 0 0 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__title
+    font-family: $font-suisse-semb
+    font-size: 72px
+    line-height: 90px
+    text-align: center
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    margin: 0 0 20px 0
+    color: $grey
+    span
+      font-family: $font-wulkan
+      color: $magenta
+  &__list
+    display: flex
+    align-items: center
+  &__item
+    &:not(:last-child)
+      margin: 0 40px 0 0
+    &:nth-child(1)
+      .banner__item-top
+        &::before
+          content: '5274,15 kn'
+          position: absolute
+          z-index: 2
+          transform: rotate(-9.38deg)
+          bottom: 5px
+          right: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          font-family: $font-suisse-med
+          width: 100px
+          height: 25px
+          font-size: 17px
+          line-height: 17px
+          letter-spacing: 0.02em
+          text-transform: uppercase
+          color: $grey
+          background: $blue
+          border: 1.11961px solid $magenta
+          border-radius: 4.47843px
+    &:nth-child(3)
+      .banner__item-top
+        &::before
+          content: '226,04 kn'
+          position: absolute
+          z-index: 2
+          transform: rotate(-9.38deg)
+          bottom: 5px
+          right: 30px
+          display: flex
+          align-items: center
+          justify-content: center
+          font-family: $font-suisse-med
+          width: 100px
+          height: 25px
+          font-size: 17px
+          line-height: 17px
+          letter-spacing: 0.02em
+          text-transform: uppercase
+          color: $grey
+          background: $blue
+          border: 1.11961px solid $magenta
+          border-radius: 4.47843px
+    &-top
+      font-family: $font-suisse-med
+      position: relative
+      font-size: 80px
+      line-height: 104px
+      text-align: center
+      text-transform: uppercase
+      color: $magenta
+      margin: 0 0 10px 0
+    &-bottom
+      font-family: $font-suisse-med
+      font-size: 24px
+      line-height: 32px
+      color: $grey
+      text-align: center
+      letter-spacing: 0.02em
+      text-transform: uppercase
+
+
+
+
+
+
+
+@media screen and (max-width: 1023px)
+  .wrapper
+    display: none
+  .Layout_column__3MM83
+    width: 100%
